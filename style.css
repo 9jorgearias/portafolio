@@ -1,0 +1,539 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/* .menu__list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+} */
+
+/*Sección Menu*/
+
+section.menu{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+.menu__header {
+    display: flex;
+    align-items: center;
+}
+.menu__header img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+.menu__title {
+    font-size: 1.5rem;
+}
+.menu__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.menu__list__item {
+    margin-right: 20px;
+}
+.menu__list__item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+/*Sección Title*/
+
+section.title{
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+.title__div {
+    display: flex;
+    align-items: center;
+}
+.title__profile {
+    width: 100px;
+    margin-right: 20px;
+}
+.title__bio {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.title__subsection {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+.title__network {
+    display: flex;
+    margin-top: 20px;
+}
+.title__network__item {
+    margin-right: 20px;
+}
+/* Estilo de las secciones */
+.about,
+.skills,
+.hobbies,
+.academic,
+.experience,
+.formcontato,
+.footer {
+    padding: 20px;
+}
+/* Estilo de los títulos de secciones */
+.about__title,
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title,
+.formcontato__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+/* Estilo de los párrafos */
+.about__paragraph {
+    margin-bottom: 15px;
+}
+/* Estilo de las imágenes de habilidades */
+.skills__img,
+.hobbies__img {
+   
+    width: 50px;
+}
+/* Estilo de las cajas de habilidades */
+.skills__box,
+.hobbies__box {
+    
+    margin-bottom: 20px;
+    
+}
+/* Estilo de las cajas de formación académica */
+.academic__courses__box {
+    display: flex;
+    margin-bottom: 20px;
+}
+.academic__courses__item__img {
+    margin-right: 10px;
+    width: 50px;
+}
+.academic__courses__item__title {
+    font-weight: bold;
+}
+.academic__courses__item__subtitle {
+    color: #555;
+}
+/* Estilo de las cajas de experiencia profesional */
+.experience__box {
+    display: flex;
+    margin-bottom: 20px;
+}
+.experience__img {
+    width: 150px;
+    margin-right: 20px;
+}
+.experience__info {
+    flex: 1;
+}
+.experience__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.experience__text {
+    color: #555;
+    margin-bottom: 10px;
+}
+/* Estilo del formulario de contacto */
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+}
+.formcontato__input,
+.formcontato__textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.formcontato__botao {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Estilo del pie de página */
+.footer__rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Seccion de about */
+/* Estilos para la sección "Sobre mi" */
+.about {
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+/* Estilos para el contenedor principal */
+.about__container {
+    text-align: justify; /* Alinear texto justificado */
+}
+
+/* Estilos para el título "Sobre mi" */
+.about__title {
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilos para el párrafo "Soy un profesional comprometido..." */
+.about__paragraph {
+    font-size: 1rem; /* Tamaño de fuente del párrafo */
+    color: #666; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para la imagen de la firma */
+.about__container img {
+    width: 100px; /* Tamaño deseado para la imagen */
+    height: auto; /* Mantener la proporción original */
+    margin-top: 10px; /* Espacio superior */
+    float: left; /* Flotar la imagen a la izquierda */
+    margin-right: 20px; /* Espacio a la derecha para separación */
+}
+
+
+/*Sección skills*/
+
+/* Estilo general para la sección de skills */
+.skills {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del título de la sección de skills */
+.skills__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor del carrusel */
+.skills__line {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Permite desplazarse horizontalmente */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    padding-bottom: 20px;
+}
+
+/* Estilo de cada caja de skill en el carrusel */
+.skills__box {
+    flex: 0 0 auto;
+    width: 120px; /* Ancho fijo de cada elemento */
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Transición suave al transformar */
+}
+
+/* Estilo de imagen dentro de cada caja de skill */
+.skills__img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Para hacer la imagen redonda */
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor */
+}
+
+/* Estilo del nombre del skill */
+.skills__name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Cambio en la posición al hacer hover sobre una caja */
+.skills__box:hover {
+    transform: scale(1.1); /* Hace que la caja aumente de tamaño al hacer hover */
+}
+
+
+/*Sección Hobbies*/
+
+/* Estilo general para la sección de hobbies */
+.hobbies {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del título de la sección de hobbies */
+.hobbies__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor del carrusel */
+.hobbies__line {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Permite desplazarse horizontalmente */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    padding-bottom: 20px;
+}
+
+/* Estilo de cada caja de hobby en el carrusel */
+.hobbies__box {
+    flex: 0 0 auto;
+    width: 120px; /* Ancho fijo de cada elemento */
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Transición suave al transformar */
+}
+
+/* Estilo de imagen dentro de cada caja de hobby */
+.hobbies__img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Para hacer la imagen redonda */
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor */
+}
+
+/* Estilo del nombre del hobby */
+.hobbies__name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Cambio en la posición al hacer hover sobre una caja */
+.hobbies__box:hover {
+    transform: scale(1.1); /* Hace que la caja aumente de tamaño al hacer hover */
+}
+
+
+/* Experiencia Académica*/
+
+/* Estilo general para la sección de formación académica */
+.academic {
+    padding: 40px 20px;
+    background-color: #f7f7f7; /* Color de fondo */
+}
+
+/* Estilo del título de la sección de formación académica */
+.academic__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo del contenedor de cursos académicos */
+.academic__courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+}
+
+/* Estilo de cada caja de curso académico */
+.academic__courses__box {
+    width: calc(33.33% - 20px); /* Ajusta el ancho de cada caja */
+    margin-bottom: 30px;
+    border: 1px solid #ddd; /* Borde alrededor de cada caja */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-color: #fff; /* Color de fondo de cada caja */
+}
+
+/* Estilo de la lista de cursos dentro de cada caja */
+.academic__courses__list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo del título del curso */
+.academic__courses__item__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo del subtítulo del curso (año) */
+.academic__courses__item__subtitle {
+    color: #888;
+    font-size: 1rem;
+}
+
+
+/* experiencia*/
+
+/* Estilo general para la sección de experiencia profesional */
+.experience {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+/* Estilo del título de la sección de experiencia profesional */
+.experience__section__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo de cada caja de experiencia */
+.experience__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd; /* Borde alrededor de cada caja */
+    background-color: #fff; /* Color de fondo de cada caja */
+}
+
+/* Estilo de la imagen de la experiencia */
+.experience__img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-width: 300px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática según el ancho */
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de información de la experiencia */
+.experience__info {
+    text-align: center;
+}
+
+/* Estilo del título de la experiencia */
+.experience__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo del texto de la experiencia */
+.experience__text {
+    color: #888;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones (repositorio y demo) */
+.experience__repo,
+.experience__demo {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Estilo de los botones dentro de la experiencia */
+.experience__botao--repo,
+.experience__botao--demo {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo de respuesta móvil */
+@media (max-width: 768px) {
+    .experience__box {
+        width: 100%; /* Cada caja ocupa todo el ancho en dispositivos móviles */
+    }
+}
+
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+    .title__div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title__profile {
+        margin-bottom: 20px;
+    }
+
+    .menu__list {
+        flex-direction: column;
+    }
+
+    .menu__list__item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .experience__box {
+        flex-direction: column;
+    }
+
+    .experience__img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .experience__info {
+        text-align: center;
+    }
+
+}
+
+/*Mobile*/
+@media (max-width: 480px) {
+
+    .title__bio {
+        font-size: 1.2rem;
+    }
+
+    .title__subsection {
+        font-size: 0.8rem;
+    }
+
+    .menu__title {
+        font-size: 1.2rem;
+    }
+
+    .menu__list__item a {
+        font-size: 0.9rem;
+    }
+
+}
